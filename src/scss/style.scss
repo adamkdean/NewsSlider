@@ -1,0 +1,112 @@
+body { 
+    background: #c4beba; 
+    font-family: sans-serif;    
+}
+
+h1.newsslider__fluff {
+    text-align: center;
+}
+
+.clearfix { clear: both; }
+.container { background: #fff; }
+
+.news {
+    background: #fff;
+
+    .news__articles {
+        width: 100%;
+        
+        .news__article { 
+            display: none;
+            height: 300px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            background: #eee;
+            border: 1px solid #796a63;            
+            padding: 0 10px;
+
+            &:first-child {
+                display: block;
+            }
+        }
+    }
+
+    .news__markers {
+        margin: 0 auto;        
+        
+        padding: 20px 0 30px 0;
+
+        .news__marker {
+            float: left;
+            display: block;            
+            width: 12px;
+            height: 12px;
+            background: url(../img/empty.png);
+            margin: 0 2px;
+
+            &.active {
+                background: url(../img/filled.png);
+            }
+        }
+    }
+
+    .news__controls {
+        width: 100%;
+
+        a.news__prev,
+        a.news__next {
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin-top: 85px;
+        }
+        a.news__prev {
+            float: left;
+            background: url(../img/left.png);
+        }
+        a.news__next {
+            float: right;
+            background: url(../img/right.png);
+        }
+
+        .news__sliders {
+            position: relative;
+            float: left;
+            width: 880px;
+            height: 190px;
+            padding: 30px 0;
+
+            border-left: 30px solid #fff;
+            border-right: 30px solid #fff;
+            box-sizing: border-box;
+
+            background: #fff;
+            overflow: hidden;
+
+            a.news__slider {
+                position: absolute;
+                display: none;
+                width: 230px;
+                height: 130px;
+                margin: 0 30px;
+                padding: 30px 10px;
+                box-sizing: border-box;
+
+                background: #eee url(../img/newsbg.png);
+                color: #796a63;
+                border: 1px solid #796a63;
+                text-align: center;
+                line-height: 1.2em;
+                font-size: 140%;
+                text-decoration: none;
+
+                -webkit-transition: all 0.3s ease-out;
+                   -moz-transition: all 0.3s ease-out;
+                    -ms-transition: all 0.3s ease-out;
+                     -o-transition: all 0.3s ease-out;
+                        transition: all 0.3s ease-out;
+            }
+        }
+    }
+}
